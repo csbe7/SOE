@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://dl6ykc7s570w2"]
+
+[ext_resource type="Script" path="res://Scripts/Resource/weapon.cs" id="1_0iktw"]
+[ext_resource type="ArrayMesh" uid="uid://bje8b15nmali1" path="res://Models/Meshes/remmignton.tres" id="1_7mw03"]
+[ext_resource type="PackedScene" uid="uid://cqkshuogho4l1" path="res://Prefabs/hitscan_projectile.tscn" id="2_liy3n"]
+
+[sub_resource type="Curve" id="Curve_cm3nq"]
+_data = [Vector2(0, 0), 0.0, 2.0, 0, 1, Vector2(0.5, 1), 2.0, -2.0, 1, 1, Vector2(1, 0), -2.0, 0.0, 1, 0]
+point_count = 3
+
+[resource]
+script = ExtResource("1_0iktw")
+name = "Remmington"
+type = 1
+mesh = ExtResource("1_7mw03")
+rotation = Vector3(-0.328112, 1.42423, -1.62778)
+position = Vector3(0.00882423, 0.0935346, 0.0155221)
+scale = Vector3(1.6, 1.5, 1.5)
+projectile = ExtResource("2_liy3n")
+damage = 10.0
+delay = 0.5
+ammo = 6
+currAmmo = 6
+reloadTime = 1.5
+drawTime = 0.5
+weight = 1.0
+leftArm_target_rotation = Vector3(0.186251, -0.351917, 0.623968)
+leftArm_target_position = Vector3(-0.104312, -0.0455531, 0.00342834)
+kickback = 0.1
+kickup = 30.0
+recoilSpeed = 4.0
+recoilCurve = SubResource("Curve_cm3nq")
